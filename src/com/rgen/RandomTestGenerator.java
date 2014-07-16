@@ -14,7 +14,6 @@ public class RandomTestGenerator {
 
 	public void init() {
 		this.takeInput();
-		this.choose();
 		this.makeFile();
 	}
 	
@@ -57,7 +56,7 @@ public class RandomTestGenerator {
 				+ "Enter the option number:");
 		option = StdIn.readString().trim();
 
-		StdOut.println("Size of list you want:");
+		StdOut.print("Size of list you want:");
 		count = StdIn.readInt();
 
 		StdOut.println(filename + " will be of following format:\n"
@@ -83,10 +82,6 @@ public class RandomTestGenerator {
 		}
 	}
 
-	//Choose the type of test-case data to be generated
-	private void choose() {
-	}
-	
 	//Write the result to the file
 	private void makeFile() {
 		StdOut.println("Creating file ...");
