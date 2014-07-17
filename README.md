@@ -17,6 +17,7 @@ I have planned to include following modules to it:-
     - Edges with different cost
     - Directed
     - Undirected
+- **Generate public pastebin link**
 
 
 Usage
