@@ -14,3 +14,6 @@ hs_err_pid*
 .classpath
 .project
 .settings/org.eclipse.jdt.core.prefs
+
+#Project specific metadata
+.pastebin-devkey
