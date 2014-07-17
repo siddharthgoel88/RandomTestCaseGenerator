@@ -46,7 +46,7 @@ public class RandomTestGenerator {
 		File devKeyFile = new File("./.pastebin-devkey");
 
 		if(!devKeyFile.exists()) {
-			StdOut.println("Oh. I do not have your pastebin dev. "
+			StdOut.print("Oh. I do not have your pastebin dev. "
 					+ "Login pastebin and visit http://pastebin.com/api "
 					+ "to get your dev key.I will try to remember it.\n"
 					+ "Enter your key:");
