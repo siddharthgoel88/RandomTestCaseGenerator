@@ -29,8 +29,8 @@ public class RandomTestGenerator {
 	private void generateLink() {
 		String option;
 		StdOut.print("Do you want to upload this file to pastebin? (Y/N):");
-		option = StdIn.readString().trim();
-		if (option != "y" || option == "yes")
+		option = StdIn.readString().trim().toLowerCase();
+		if (option == "y" || option == "yes")
 			try {
 				generatePastebinLink();
 			} catch(Exception e) {
@@ -139,6 +139,7 @@ public class RandomTestGenerator {
 				+ "...\n"
 				+ "[Number n]\n");
 
+		result = Integer.toString(count) + "\n";
 		while(count-- > 0)
 			result += generateNumber(option);
 
