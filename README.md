@@ -18,6 +18,9 @@ I have planned to include following modules to it:-
     - Edges with different cost
     - Directed
     - Undirected
+- **Coordinate geometrical points** (specified number of points)
+    - In 2D space
+    - In 3D space
 
 
 Usage
