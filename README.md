@@ -21,6 +21,9 @@ I have planned to include following modules to it:-
 - **Coordinate geometrical points** (specified number of points)
     - In 2D space
     - In 3D space
+- **List of mixed type of data** (this test-data can be used in concepts like stable sort, comparators, etc)
+    - Strings
+    - Numbers -> Integer type, Double type
 
 
 Usage
