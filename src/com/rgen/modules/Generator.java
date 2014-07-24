@@ -3,13 +3,13 @@ package com.rgen.modules;
 public interface Generator {
 	
 	/**
-	 * List all the available formats available for a generator.
-	 * @return  a string of formats available for this type
+	 * Returns the name of the generator.
+	 * @return
 	 */
-	public String formats();
-
+	public String type();
+	
 	/**
-	 * Take user input for the type of format
+	 * Takes the necessary user input.
 	 */
 	public void takeInput();
 	
