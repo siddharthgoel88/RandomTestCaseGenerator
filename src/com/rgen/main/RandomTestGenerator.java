@@ -1,11 +1,7 @@
 package com.rgen.main;
-import java.util.InputMismatchException;
 
 import com.rgen.modules.*;
-
-import edu.princeton.cs.introcs.Out;
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.introcs.*;
 
 public class RandomTestGenerator {
 	private int module;
@@ -13,7 +9,8 @@ public class RandomTestGenerator {
 	private String result;
 	
 	private enum Modules {
-		NUMBER_LIST (new NumberList());
+		NUMBER_LIST (new NumberList()),
+		STRING_LIST (new StringList());
 		
 		private Modules(Generator gen) { this.obj = gen; }
 		private Generator obj;
@@ -52,7 +49,7 @@ public class RandomTestGenerator {
 	
 	private void makeFile() {
 		String filename;
-		StdOut.println("Enter name of file where you want to save result:");
+		StdOut.print("Enter name of file where you want to save result:");
 		filename = StdIn.readString();
 		Out file = new Out(filename);
 		file.print(result);
