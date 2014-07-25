@@ -59,7 +59,7 @@ public class NumberList implements Generator {
 		case 2:
 			return Double.toString(StdRandom.uniform(DBMIN,DBMAX)) + "\n";
 		default:
-			throw new IllegalArgumentException("Incorrect input");
+			throw new IllegalArgumentException("Incorrect input in type of list to be generated.");
 		}
 	}
 
