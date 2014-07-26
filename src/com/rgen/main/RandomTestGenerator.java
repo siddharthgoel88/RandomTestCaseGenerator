@@ -10,7 +10,8 @@ public class RandomTestGenerator {
 	
 	private enum Modules {
 		NUMBER_LIST (new NumberList()),
-		STRING_LIST (new StringList());
+		STRING_LIST (new StringList()),
+		TWOD_POINTS (new TwoDPoints());
 		
 		private Modules(Generator gen) { this.obj = gen; }
 		private Generator obj;
