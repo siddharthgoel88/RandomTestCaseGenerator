@@ -1,8 +1,11 @@
 package com.rgen.modules;
 
+import com.rgen.ds.Date;
+
 public class DateList implements Generator {
 	
 	private String result;
+	private Date date;
 	
 	public DateList() {
 		result = "";

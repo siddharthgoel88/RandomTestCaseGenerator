@@ -29,6 +29,8 @@ public class Date {
 		this.setDay(day);
 		this.setMonth(month);
 		this.setYear(year);
+		if (! isValid())
+			throw new IllegalArgumentException();
 	}
 	
 	public boolean isLeapYear() {
