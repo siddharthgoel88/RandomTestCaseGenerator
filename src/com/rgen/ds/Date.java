@@ -4,28 +4,13 @@ public class Date {
 	private int day;
 	private int month;
 	private int year;
-	private byte[] days;
+	private static final byte[] days = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	private static final String[] months = {"", "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 	
-	public Date() {
-		days = new byte[13];
-		days[0] = 0;
-		days[1] = 31;
-		days[2] = 29;
-		days[3] = 31;
-		days[4] = 30;
-		days[5] = 31;
-		days[6] = 30;
-		days[7] = 31;
-		days[8] = 31;
-		days[9] = 30;
-		days[10] = 31;
-		days[11] = 30;
-		days[12] = 31;
-		
-	}
+	public Date() {}
 	
 	public Date(int day, int month, int year) {
-		super();
 		this.setDay(day);
 		this.setMonth(month);
 		this.setYear(year);
@@ -41,6 +26,20 @@ public class Date {
 			return false;
 		
 		return true;
+	}
+	
+	public String toDDMMYYYY() {
+		if (isValid())
+			return Integer.toString(day) + "/" + Integer.toString(month) + "/" + Integer.toString(year);
+		else
+			throw new IllegalArgumentException();
+	}
+	
+	public String toDDMMMYYYY() {
+		if (isValid())
+			return Integer.toString(day) + " " + months[this.month] + " " + Integer.toString(year);
+		else
+			throw new IllegalArgumentException();
 	}
 	
 	public boolean isValid() {

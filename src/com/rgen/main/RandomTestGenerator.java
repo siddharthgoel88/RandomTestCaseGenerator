@@ -11,7 +11,8 @@ public class RandomTestGenerator {
 	private enum Modules {
 		NUMBER_LIST (new NumberList()),
 		STRING_LIST (new StringList()),
-		TWOD_POINTS (new TwoDPoints());
+		TWOD_POINTS (new TwoDPoints()),
+		DATE_LIST (new DateList());
 		
 		private Modules(Generator gen) { this.obj = gen; }
 		private Generator obj;
