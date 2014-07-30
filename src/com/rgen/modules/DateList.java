@@ -24,7 +24,7 @@ public class DateList implements Generator {
 	public DateList() {
 		result = "";
 		check = new HashMap<String, Integer>();
-		format = 0;
+		format = 1;
 	}
 
 	@Override
@@ -32,13 +32,29 @@ public class DateList implements Generator {
 		return "List of Dates";
 	}
 
-	public String formats() {
-		return null;
+	public void formats() {
+		String form = "";
+		form += "Available formats are :\n"
+				+ "1.\n"
+				+ "<no_of_dates>\n"
+				+ "DD/MM/YYYY\n"
+				+ "...\n"
+				+ "DD/MM/YYYY\n"
+				+ "2.\n"
+				+ "<no_of_dates>\n"
+				+ "DD MMM YYYY\n"
+				+ "...\n"
+				+ "DD MMM YYYY\n";
+		StdOut.println(form);
+		StdOut.println("Enter the format you want to enter:");
+		format = StdIn.readInt();
+		format--;
 	}
 	
 	@Override
 	public void takeInput() {
-		StdOut.println("How many dates do you want to generate :");
+		formats();
+		StdOut.print("How many dates do you want to generate :");
 		size = StdIn.readLong();
 	}
 	
@@ -59,11 +75,11 @@ public class DateList implements Generator {
 			year = StdRandom.uniform(1900, 2015);
 			try {
 				date = new Date(day, month, year);
+				if (check.containsKey(toStr()))
+					flag = true;
 			} catch(Exception e) {
 				flag = true;
 			}
-			if (check.containsKey(toStr()))
-				flag = true;
 		} while(flag);
 		
 		check.put(toStr(), 1);
@@ -72,6 +88,7 @@ public class DateList implements Generator {
 	
 	@Override
 	public String generate() {
+		result += Long.toString(size) + "\n";
 		while(size-- > 0) {
 			result += generateDate() + "\n";
 		}
