@@ -3,12 +3,14 @@ package com.rgen.main;
 import com.rgen.modules.*;
 import edu.princeton.cs.introcs.*;
 
+//TODO Handle exceptions at various places
 public class RandomTestGenerator {
 	private int module;
 	private Generator chosen;
 	private String result;
 	
 	private enum Modules {
+		//TODO Add check for Generator interface instance
 		NUMBER_LIST (new NumberList()),
 		STRING_LIST (new StringList()),
 		TWOD_POINTS (new TwoDPoints()),

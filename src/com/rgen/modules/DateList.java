@@ -46,7 +46,7 @@ public class DateList implements Generator {
 				+ "...\n"
 				+ "DD MMM YYYY\n";
 		StdOut.println(form);
-		StdOut.println("Enter the format you want to enter:");
+		StdOut.print("Enter the format you want to enter:");
 		format = StdIn.readInt();
 		format--;
 	}
